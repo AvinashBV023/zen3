@@ -23,25 +23,8 @@ this.updateColumnspace = this.updateColumnspace.bind(this);
 
  updateRows(e){
   
-let string='';
   this.setState({noofRow:e.target.value});
-  console.log(this.state.noofRow);
-  if(this.state.cols){
-    for(let i=0;i<e.target.value;i++){
-      string+=`<div class="row" style=${'margin:'+this.state.spaceRows+'px'}>`;
-      console.log(this.state.cols[i]);
-        for(let j=0;j<this.state.cols[i]; j++){
-          string += `<div class="col" style=${'margin:'+this.state.spaceBox+'px'}></div>`;
-        }
-        string+=`</div>`;
-  }
 
-
-
-  }
-  const node = document.querySelectorAll('#parent')[0];
-
-  node.innerHTML = string;
  
 
 }
@@ -52,19 +35,7 @@ updateCols(e){
  const colArray=e.target.value.split(',');
  this.setState({cols:colArray});
 
- for(let i=0;i<this.state.noofRow;i++){
-  string+=`<div class="row" style=${'margin:'+this.state.spaceRows+'px'} >`;
-  console.log(this.state.cols[i]);
-    for(let j=0;j<colArray[i]; j++){
-      string += `<div class="col" style=${'margin:'+this.state.spaceBox+'px'}></div>`;
-    }
-    string+=`</div>`;
 
-
-}
-const node = document.querySelectorAll('#parent')[0];
-
-node.innerHTML = string;
 
 }
 updateRowspace(e){
@@ -72,19 +43,27 @@ updateRowspace(e){
 
 console.log(e.target.value);
   this.setState({spaceRows:e.target.value});
-  // for(let i=0;i<this.state.noofRow;i++){
-  //   string+=`<div class="row" style=${'margin:' + e.target.value + 'px 0px'} >`;
-  //     for(let j=0;j<this.state.cols[i]; j++){
-  //       string += `<div class="col" style=${'margin:0px '+ this.state.spaceBox +'px'}></div>`;
-  //     }
-  //     string+=`</div>`;
-  
-  
-  // }
-  // const node = document.querySelectorAll('#parent')[0];
-  
-  // node.innerHTML = string;
 
+
+}
+componentDidUpdate (){
+  let string='';
+
+
+ 
+  for(let i=0;i<this.state.noofRow;i++){
+   string+=`<div class="row" style=${'margin:'+this.state.spaceRows+'px'} >`;
+   console.log(this.state.cols[i]);
+     for(let j=0;j<this.state.cols[i]; j++){
+       string += `<div class="col" style=${'margin:'+this.state.spaceBox+'px'}></div>`;
+     }
+     string+=`</div>`;
+ 
+ 
+ }
+ const node = document.querySelectorAll('#parent')[0];
+ 
+ node.innerHTML = string;
 }
 updateColumnspace(e){
   // let string='';
