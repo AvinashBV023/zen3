@@ -109,10 +109,11 @@ updateColumnspace(e){
   render() {
     return (
       <div className="container">
-       <input onChange={this.updateRows} placeholder="enter no of rows"></input>
-             <input onChange={this.updateCols} placeholder="enter no of columns"></input>
-      <input onChange={this.updateRowspace} placeholder="enter space between rows"></input>
-      <input onChange={this.updateColumnspace} placeholder="enter space between boxes"></input>
+        <h1 >Task</h1>
+       <input className="inpt" onChange={this.updateRows} placeholder="enter no of rows"></input>
+      <input className="inpt" onChange={this.updateCols} placeholder="enter no of columns"></input>
+      <input className="inpt" onChange={this.updateRowspace} placeholder="enter space between rows"></input>
+      <input className="inpt" onChange={this.updateColumnspace} placeholder="enter space between boxes"></input>
 
         <div id="parent">
        {/* {this.markup} */}
