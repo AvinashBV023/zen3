@@ -44,7 +44,7 @@ class App extends React.Component {
 
   console.log(e.target.value);
     this.setState({spaceRows:e.target.value});
-    this.rowstyle = `margin:${e.target.value}px\n0px`;
+    this.rowstyle = `margin-bottom:${e.target.value}px`;
 
     console.log(this.rowstyle,'this.rowstyle');
 
@@ -73,7 +73,7 @@ class App extends React.Component {
     console.log(e.target.value);
 
     this.setState({spaceBox:e.target.value});
-    this.columnstyle = `margin:${e.target.value/2}px`;
+    this.columnstyle = `margin-left:${e.target.value/2}px;margin-right:${e.target.value/2}px`;
     // e.target.style.setProperty('--x',e.target.value);
   }
 
