@@ -59,7 +59,7 @@ class App extends React.Component {
     string+=`<div class="row" style=${this.rowstyle} >`;
     console.log(this.state.cols[i]);
       for(let j=0;j<this.state.cols[i]; j++){
-        string += `<div class="col" ></div>`;
+        string += `<div class="col" style=${this.columnstyle}></div>`;
       }
       string+=`</div>`;
   
@@ -73,8 +73,8 @@ class App extends React.Component {
     console.log(e.target.value);
 
     this.setState({spaceBox:e.target.value});
-    // this.columnstyle = `margin:0px\t${e.target.value/2}px`;
-    e.target.style.setProperty('--x',e.target.value);
+    this.columnstyle = `margin:${e.target.value/2}px`;
+    // e.target.style.setProperty('--x',e.target.value);
   }
 
     render() {
