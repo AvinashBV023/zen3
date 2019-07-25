@@ -12,11 +12,10 @@ code {
     monospace;
 }
 .container{
-width: 500px;
+width: 1080px;
 max-width: 90%;
 text-align: center;
 margin:0px auto;
-border:2px soild black;
 padding: 20px;
 
 }
@@ -36,4 +35,5 @@ padding: 20px;
   display: block;
   margin: 10px auto;
   padding: 5px;
+  width:250px;
 }
